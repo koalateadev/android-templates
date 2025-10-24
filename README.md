@@ -15,6 +15,7 @@ A collection of setup instructions and configurations for common Android develop
 ### Networking
 - [OkHttp](./setup/okhttp.md)
 - [Retrofit](./setup/retrofit.md)
+- [Moshi](./setup/moshi.md)
 
 ### Database & Storage
 - [Room](./setup/room.md)
@@ -71,6 +72,21 @@ A collection of setup instructions and configurations for common Android develop
 - All examples use Gradle Kotlin DSL (`.kts`)
 - Versions are current as of October 2025
 - Always check for the latest stable versions on Maven Central
+
+## 📖 Concepts & Deep Dives
+
+In-depth explanations of how Android systems work (10 guides):
+
+- [Lifecycle](./concepts/lifecycle.md) - Activity, Fragment, ViewModel, and Composable lifecycles
+- [Compose Rendering](./concepts/compose-rendering.md) - Composition, Layout, Drawing phases explained
+- [Coroutines & Flow Internals](./concepts/coroutines-flow-internals.md) - How coroutines and Flow work under the hood
+- [System Access](./concepts/system-access.md) - Context types, system services, content providers
+- [Room Transactions](./concepts/room-transactions.md) - ACID properties, transactions, conflict strategies
+- [Material3 Concepts](./concepts/material3-concepts.md) - Design tokens, dynamic color, typography, elevation
+- [Background Work](./concepts/background-work.md) - WorkManager vs AlarmManager, Doze mode, foreground services
+- [OAuth2 & JWT](./concepts/oauth-jwt.md) - OAuth2 flow with PKCE, JWT structure, token management
+- [DateTime Handling](./concepts/datetime.md) - Date/time across SDK versions, timezones, formatting
+- [WebView](./concepts/webview.md) - WebView vs alternatives, security, JavaScript bridge, Compose integration
 
 ## 🎯 Common Patterns
 
