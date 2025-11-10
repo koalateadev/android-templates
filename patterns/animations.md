@@ -938,20 +938,19 @@ fun DeferredAnimation() {
 
 ## Best Practices
 
-1. ✅ Use `animateContentSize()` for smooth size changes
-2. ✅ Use `animateItemPlacement()` for list reordering
-3. ✅ Provide `label` parameter for animation debugging
-4. ✅ Use `graphicsLayer` for transform animations (better performance)
-5. ✅ Use infinite transitions sparingly (battery drain)
-6. ✅ Clean up animations in `DisposableEffect`
-7. ✅ Test animations on low-end devices
-8. ✅ Use appropriate animation specs (spring, tween)
-9. ✅ Avoid animating layout properties when possible
-10. ✅ Consider accessibility (respect animation preferences)
+- Use animateContentSize() for smooth size changes
+- Use animateItemPlacement() for list reordering
+- Provide label parameter for debugging
+- Use graphicsLayer for transform animations
+- Use infinite transitions sparingly
+- Clean up animations in DisposableEffect
+- Test on low-end devices
+- Use appropriate animation specs
+- Consider accessibility preferences
 
 ## Common Mistakes
 
-### ❌ Animating Inside Composition
+### Animating Inside Composition
 
 ```kotlin
 // Bad
@@ -968,7 +967,7 @@ fun GoodAnimation() {
 }
 ```
 
-### ❌ Creating New Transition States
+### Creating New Transition States
 
 ```kotlin
 // Bad - Creates new state on every recomposition

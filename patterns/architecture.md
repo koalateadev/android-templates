@@ -540,16 +540,15 @@ object HomeModule {
 
 ## Best Practices
 
-1. ✅ **Separate concerns** (UI, Domain, Data)
-2. ✅ **Depend on abstractions** not implementations
-3. ✅ **Use interfaces** for repositories
-4. ✅ **Keep ViewModels** framework-independent
-5. ✅ **Use mappers** between layers
-6. ✅ **Single responsibility** per class
-7. ✅ **Dependency injection** for testability
-8. ✅ **Keep domain layer** pure Kotlin
-9. ✅ **Use use cases** for complex business logic
-10. ✅ **Document architecture** decisions
+- Separate concerns (UI, Domain, Data)
+- Depend on abstractions not implementations
+- Use interfaces for repositories
+- Keep ViewModels framework-independent
+- Use mappers between layers
+- Single responsibility per class
+- Use dependency injection for testability
+- Keep domain layer pure Kotlin
+- Use use cases for complex business logic
 
 ## Resources
 

@@ -712,16 +712,12 @@ jobs:
 
 ## Best Practices
 
-1. ✅ Run detekt in CI/CD pipeline
-2. ✅ Use baseline for legacy code
-3. ✅ Enable formatting plugin
-4. ✅ Customize rules for your project
-5. ✅ Fix issues incrementally
-6. ✅ Review reports regularly
-7. ✅ Keep configuration updated
-8. ✅ Use pre-commit hooks
-9. ✅ Document custom rules
-10. ✅ Train team on code style
+- Run detekt in CI/CD pipeline
+- Use baseline for legacy code
+- Enable formatting plugin
+- Customize rules for your project
+- Review reports regularly
+- Keep configuration updated
 
 ## Resources
 

@@ -695,21 +695,17 @@ fun test() = runTest(coroutineRule.testDispatcher) {
 
 ## Best Practices
 
-1. ✅ Use test data builders for complex objects
-2. ✅ Implement Robot pattern for UI tests
-3. ✅ Create fake repositories for testing
-4. ✅ Test ViewModels independently from UI
-5. ✅ Use Turbine for Flow testing
-6. ✅ Mock external dependencies
-7. ✅ Write integration tests for critical flows
-8. ✅ Use test tags for finding composables
-9. ✅ Test loading, success, and error states
-10. ✅ Keep tests focused and independent
-11. ✅ Use descriptive test names
-12. ✅ Follow AAA pattern (Arrange, Act, Assert)
-13. ✅ Test edge cases
-14. ✅ Aim for high coverage on business logic
-15. ✅ Use MockWebServer for API tests
+- Use test data builders for complex objects
+- Implement Robot pattern for UI tests
+- Create fake repositories for testing
+- Test ViewModels independently from UI
+- Use Turbine for Flow testing
+- Mock external dependencies
+- Test loading, success, and error states
+- Keep tests focused and independent
+- Use descriptive test names
+- Follow AAA pattern (Arrange, Act, Assert)
+- Use MockWebServer for API tests
 
 ## Test Organization
 

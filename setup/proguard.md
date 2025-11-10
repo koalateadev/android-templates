@@ -424,16 +424,14 @@ android.enableR8.fullMode=false
 
 ## Best Practices
 
-1. ✅ Test with ProGuard enabled early and often
-2. ✅ Keep mapping files for all releases
-3. ✅ Use consumer ProGuard files in libraries
-4. ✅ Don't keep more than necessary
-5. ✅ Use @Keep annotations for public APIs
-6. ✅ Test thoroughly before release
-7. ✅ Monitor crash reports for ProGuard issues
-8. ✅ Document custom rules
-9. ✅ Use printconfiguration for debugging
-10. ✅ Update rules when adding new libraries
+- Test with ProGuard enabled early
+- Keep mapping files for all releases
+- Use consumer ProGuard files in libraries
+- Don't keep more than necessary
+- Use @Keep for public APIs
+- Monitor crash reports for ProGuard issues
+- Document custom rules
+- Update rules when adding libraries
 
 ## Consumer ProGuard Rules
 

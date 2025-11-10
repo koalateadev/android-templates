@@ -702,16 +702,15 @@ suspend fun loadDashboard() = coroutineScope {
 
 ## Best Practices
 
-1. ✅ Use StateFlow for UI state
-2. ✅ Use SharedFlow for one-time events
-3. ✅ Use `flowOn` to specify dispatcher
-4. ✅ Handle errors with try-catch or catch operator
-5. ✅ Cancel flows when no longer needed
-6. ✅ Use `stateIn` to convert Flow to StateFlow
-7. ✅ Collect flows in lifecycle-aware manner
-8. ✅ Use appropriate started policy for stateIn
-9. ✅ Test flows with Turbine
-10. ✅ Use debounce for search and user input
+- Use StateFlow for UI state
+- Use SharedFlow for one-time events
+- Use flowOn to specify dispatcher
+- Handle errors with try-catch or catch operator
+- Cancel flows when no longer needed
+- Use stateIn to convert Flow to StateFlow
+- Collect flows in lifecycle-aware manner
+- Test flows with Turbine
+- Use debounce for search and user input
 
 ## Resources
 

@@ -1,134 +1,108 @@
-# Android Common Patterns
+# Common Patterns
 
-Practical, copy-paste ready code templates for common Android development scenarios.
+Code templates for common Android development scenarios.
 
-## 📱 Available Patterns
+## Available Patterns
 
 ### [Compose UI Patterns](./compose-ui-patterns.md)
-Ready-to-use UI components and patterns:
-- ✅ Loading states (spinner, skeleton, overlay)
-- ✅ Error handling (full screen, inline)
-- ✅ Empty states
-- ✅ Pull to refresh
-- ✅ Infinite scroll / pagination
-- ✅ Search with debounce
-- ✅ Dialogs (confirmation, input, date/time, multi-select)
-- ✅ Bottom sheets
-- ✅ Swipe to delete
-- ✅ Form validation
-- ✅ Tab layouts
-- ✅ **Toasts** (simple, custom)
-- ✅ **Snackbars** (basic, with action, custom)
-- ✅ **Advanced forms** (multi-step, dynamic fields)
-- ✅ **Filters & Sort** (chips, bottom sheet, menu)
+UI components and patterns:
+- Loading states
+- Error handling
+- Empty states
+- Pull to refresh
+- Infinite scroll
+- Search with debounce
+- Dialogs (confirmation, input, date/time, multi-select)
+- Bottom sheets
+- Swipe to delete
+- Form validation
+- Toasts and snackbars
+- Multi-step forms
+- Filters and sorting
 
 ### [State Management](./state-management.md)
-Master state management in Compose:
-- ✅ State hoisting strategies
-- ✅ Remember variants (remember, rememberSaveable, rememberUpdatedState)
-- ✅ Side effects (LaunchedEffect, DisposableEffect, SideEffect)
-- ✅ MVI architecture implementation
-- ✅ Unidirectional data flow
-- ✅ CompositionLocal usage
-- ✅ Derived state patterns
-- ✅ State restoration
-- ✅ Undo/Redo patterns
-- ✅ Best practices and common mistakes
+State management in Compose:
+- State hoisting
+- Remember variants
+- Side effects (LaunchedEffect, DisposableEffect)
+- MVI architecture
+- Unidirectional data flow
+- CompositionLocal
+- Derived state
+- State restoration
 
 ### [Animation & Transitions](./animations.md)
-Create beautiful animations:
-- ✅ Basic animations (color, size, float)
-- ✅ AnimatedVisibility (enter/exit)
-- ✅ AnimatedContent (screen transitions)
-- ✅ List animations (enter, exit, reordering)
-- ✅ Gesture animations (swipe, drag)
-- ✅ Screen transitions (fade, slide, scale)
-- ✅ Shared element transitions
-- ✅ Custom animations (pulse, shimmer, bounce)
-- ✅ Progress animations
-- ✅ Animation specs (spring, tween, keyframes)
+Animation patterns:
+- Basic animations
+- AnimatedVisibility
+- AnimatedContent
+- List animations
+- Gesture animations
+- Screen transitions
+- Shared elements
+- Custom animations
 
 ### [Security Patterns](./security.md)
-Secure your Android app:
-- ✅ Secure data storage (EncryptedSharedPreferences, EncryptedFile)
-- ✅ API key management (BuildConfig, NDK, backend)
-- ✅ Certificate pinning
-- ✅ JWT token management (refresh, expiration)
-- ✅ Biometric authentication
-- ✅ Data encryption (Android Keystore)
-- ✅ ProGuard security rules
-- ✅ Network security config
-- ✅ Root detection
-- ✅ Input validation
-- ✅ Secure WebView
-- ✅ Security checklist
+Security implementation:
+- Encrypted storage
+- API key management
+- Certificate pinning
+- Token management
+- Biometric authentication
+- Data encryption
+- Network security
 
 ### [Performance Optimization](./performance.md)
-Optimize app performance:
-- ✅ Recomposition optimization
-- ✅ LazyColumn optimization (keys, contentType)
-- ✅ Image loading and caching
-- ✅ Memory management
-- ✅ State optimization
-- ✅ Stability annotations
-- ✅ derivedStateOf usage
-- ✅ Profiling with Composition Tracing
-- ✅ Performance checklist
+Performance patterns:
+- Recomposition optimization
+- LazyColumn best practices
+- Image caching
+- Memory management
+- Stability annotations
+- Profiling techniques
 
 ### [Offline-First Patterns](./offline-first.md)
-Build apps that work offline:
-- ✅ Network + Database strategy
-- ✅ Connection monitoring
-- ✅ Background sync with WorkManager
-- ✅ Incremental sync
-- ✅ Conflict resolution
-- ✅ Queue-based sync
-- ✅ Optimistic updates
-- ✅ Cache expiration
+Offline-first implementation:
+- Network + database strategy
+- Connection monitoring
+- Background sync
+- Conflict resolution
+- Optimistic updates
 
 ### [Accessibility](./accessibility.md)
-Make apps accessible to everyone:
-- ✅ Content descriptions
-- ✅ Semantic properties
-- ✅ Touch target sizes
-- ✅ Screen reader support
-- ✅ Keyboard navigation
-- ✅ Color contrast checking
-- ✅ Text scaling
-- ✅ Accessibility testing
-- ✅ TalkBack support
-- ✅ Accessibility checklist
+Accessibility implementation:
+- Content descriptions
+- Semantic properties
+- Touch target sizing
+- Screen reader support
+- Keyboard navigation
+- Color contrast
 
 ### [Architecture Patterns](./architecture.md)
-Structure your codebase:
-- ✅ Repository pattern
-- ✅ Use Case pattern
-- ✅ Mapper pattern (Entity → Domain → UI)
-- ✅ MVVM implementation
-- ✅ Clean Architecture
-- ✅ Multi-module architecture
-- ✅ Dependency injection strategies
+Code organization:
+- Repository pattern
+- Use Case pattern
+- Mapper pattern
+- MVVM
+- Clean Architecture
+- Multi-module setup
 
 ### [Testing Patterns](./testing.md)
-Write better tests:
-- ✅ Test data builders
-- ✅ Robot pattern for UI tests
-- ✅ Fake repositories
-- ✅ ViewModel testing
-- ✅ Compose UI testing
-- ✅ Flow testing with Turbine
-- ✅ Repository testing with MockWebServer
-- ✅ Integration testing
-- ✅ Test helpers and extensions
+Testing strategies:
+- Test data builders
+- Robot pattern
+- Fake repositories
+- ViewModel testing
+- UI testing
+- Flow testing
 
-## 🎯 How to Use
+## Usage
 
-1. **Browse** the pattern you need
-2. **Copy** the code snippet
-3. **Adapt** to your specific use case
-4. **Test** thoroughly in your app
+1. Find the pattern you need
+2. Copy the code snippet
+3. Adapt to your use case
 
-## 💡 Examples
+## Examples
 
 ### Quick Loading State
 
@@ -179,28 +153,9 @@ fun CameraFeature() {
 }
 ```
 
-## 🔗 Related
+## Related
 
-- [Setup Guides](../setup/) - Library configuration and setup
-- [Quick Start](../QUICKSTART.md) - Complete project setup
-
-## 📝 Best Practices
-
-- Always handle edge cases (no network, no permission, etc.)
-- Provide user feedback (loading, errors, success)
-- Test on different Android versions
-- Follow Material Design guidelines
-- Keep code clean and maintainable
-- Add proper content descriptions for accessibility
-
-## 🤝 Contributing
-
-Have a useful pattern to share? Feel free to add it!
-
-Patterns should be:
-- ✅ Practical and commonly needed
-- ✅ Well-documented with examples
-- ✅ Copy-paste ready
-- ✅ Following Android best practices
-- ✅ Compatible with modern Android (API 24+)
+- [Setup Guides](../setup/)
+- [Concepts](../concepts/)
+- [Quick Start](../QUICKSTART.md)
 

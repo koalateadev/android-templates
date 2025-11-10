@@ -525,16 +525,14 @@ class UserServiceTest {
 
 ## Best Practices
 
-1. ✅ Follow AAA pattern (Arrange, Act, Assert)
-2. ✅ Use descriptive test names
-3. ✅ Test one thing per test
-4. ✅ Use mockk for dependencies
-5. ✅ Test edge cases and error scenarios
-6. ✅ Use parameterized tests for multiple inputs
-7. ✅ Keep tests independent
-8. ✅ Use TestDispatcher for coroutines
-9. ✅ Verify interactions with mocks
-10. ✅ Aim for high code coverage
+- Follow AAA pattern (Arrange, Act, Assert)
+- Use descriptive test names
+- Test one thing per test
+- Use mockk for dependencies
+- Test edge cases and error scenarios
+- Use parameterized tests for multiple inputs
+- Keep tests independent
+- Use TestDispatcher for coroutines
 
 ## Test Coverage
 

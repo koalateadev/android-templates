@@ -587,32 +587,28 @@ val repositoryModule = module {
 
 ## Best Practices
 
-1. ✅ Organize modules by feature or layer
-2. ✅ Use `single` for singletons, `factory` for new instances
-3. ✅ Prefer constructor injection
-4. ✅ Use scopes for lifecycle-bound dependencies
-5. ✅ Test modules independently
-6. ✅ Use qualifiers for multiple instances of same type
-7. ✅ Keep modules focused and small
-8. ✅ Document complex dependency graphs
-9. ✅ Use `viewModel` DSL for ViewModels
-10. ✅ Close scopes when done
+- Organize modules by feature or layer
+- Use single for singletons, factory for new instances
+- Prefer constructor injection
+- Use scopes for lifecycle-bound dependencies
+- Use qualifiers for multiple instances
+- Keep modules focused and small
+- Use viewModel DSL for ViewModels
+- Close scopes when done
 
 ## Advantages over Hilt
 
-✅ **Faster compilation** - No code generation
-✅ **Easier to learn** - Simpler DSL
-✅ **Runtime DI** - More flexible
-✅ **Smaller library** - Less overhead
-✅ **Better error messages** - Clearer at runtime
-✅ **No annotation processing** - Faster builds
+- Faster compilation (no code generation)
+- Simpler DSL
+- More flexible (runtime DI)
+- Smaller library size
+- Better error messages at runtime
 
 ## Disadvantages
 
-❌ **Runtime errors** - No compile-time verification
-❌ **Less IDE support** - No navigation to providers
-❌ **Reflection-based** - Slightly slower at runtime
-❌ **Manual setup** - Must declare all dependencies
+- Runtime errors (no compile-time verification)
+- Less IDE support
+- Manual dependency declaration required
 
 ## Advanced Features
 

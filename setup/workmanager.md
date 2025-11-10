@@ -594,16 +594,14 @@ class WorkManagerTest {
 
 ## Best Practices
 
-1. ✅ Use WorkManager for deferrable, guaranteed work
-2. ✅ Set appropriate constraints
-3. ✅ Handle retry logic properly
-4. ✅ Use unique work names to avoid duplicates
-5. ✅ Observe work state for UI updates
-6. ✅ Keep workers lightweight (< 10 minutes)
-7. ✅ Use foreground service for long operations
-8. ✅ Test workers thoroughly
-9. ✅ Don't use for real-time operations
-10. ✅ Clean up work when no longer needed
+- Use WorkManager for deferrable, guaranteed work
+- Set appropriate constraints
+- Handle retry logic properly
+- Use unique work names to avoid duplicates
+- Keep workers lightweight (under 10 minutes)
+- Use foreground service for long operations
+- Test workers thoroughly
+- Don't use for real-time operations
 
 ## Common Use Cases
 

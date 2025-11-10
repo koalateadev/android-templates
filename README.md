@@ -1,8 +1,8 @@
-# Android Setup Templates
+# Android Development Templates
 
-A collection of setup instructions and configurations for common Android development libraries and frameworks.
+Setup instructions and code patterns for modern Android development.
 
-## 📚 Setup Guides
+## Setup Guides
 
 ### Core Dependencies
 - [Gradle Setup & Version Catalogs](./setup/gradle-version-catalogs.md)
@@ -61,21 +61,21 @@ A collection of setup instructions and configurations for common Android develop
 - [Navigation Compose (Type-Safe)](./setup/navigation-compose.md)
 - [Navigation 3 (Experimental)](./setup/navigation3.md)
 
-## 🚀 Quick Start
+## Usage
 
-1. Choose the libraries you need for your project
-2. Follow the setup instructions in each guide
-3. Copy and adapt the configuration snippets to your project
+1. Browse the setup guides for libraries you need
+2. Copy configuration from the guide
+3. Adapt to your project
 
-## 📝 Notes
+## Notes
 
-- All examples use Gradle Kotlin DSL (`.kts`)
-- Versions are current as of October 2025
-- Always check for the latest stable versions on Maven Central
+- Examples use Gradle Kotlin DSL
+- Check Maven Central for latest versions
+- Versions current as of October 2025
 
-## 📖 Concepts & Deep Dives
+## Concepts
 
-In-depth explanations of how Android systems work (10 guides):
+Understanding how Android systems work:
 
 - [Lifecycle](./concepts/lifecycle.md) - Activity, Fragment, ViewModel, and Composable lifecycles
 - [Compose Rendering](./concepts/compose-rendering.md) - Composition, Layout, Drawing phases explained
@@ -88,9 +88,9 @@ In-depth explanations of how Android systems work (10 guides):
 - [DateTime Handling](./concepts/datetime.md) - Date/time across SDK versions, timezones, formatting
 - [WebView](./concepts/webview.md) - WebView vs alternatives, security, JavaScript bridge, Compose integration
 
-## 🎯 Common Patterns
+## Common Patterns
 
-Practical code templates for everyday scenarios (11 comprehensive guides):
+Code templates for common scenarios:
 
 ### Core Patterns
 - [Compose UI Patterns](./patterns/compose-ui-patterns.md) - 60+ UI patterns: loading, errors, dialogs, forms, toasts, snackbars, filters
@@ -112,7 +112,7 @@ Practical code templates for everyday scenarios (11 comprehensive guides):
 - [Permissions in Compose](./patterns/permissions-compose.md) - Runtime permissions, image picker
 - [Common Intents](./patterns/intents.md) - Share, email, phone, maps, camera
 
-## 🤝 Contributing
+## Contributing
 
-Feel free to add more setup guides or update existing ones as libraries evolve.
+Contributions welcome. Update guides as libraries evolve.
 

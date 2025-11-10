@@ -910,20 +910,19 @@ class UndoRedoViewModel<T>(initialState: T) : ViewModel() {
 
 ## Best Practices
 
-1. ✅ **Hoist state** to the lowest common ancestor
-2. ✅ **Use StateFlow** in ViewModels, not MutableState
-3. ✅ **Separate state and events** clearly
-4. ✅ **Use sealed interfaces** for type-safe states
-5. ✅ **Minimize state** - derive when possible
-6. ✅ **Use appropriate remember** variants
-7. ✅ **Handle side effects** correctly
-8. ✅ **Make state immutable** (use data classes with copy)
-9. ✅ **Single source of truth** for each piece of state
-10. ✅ **Test state changes** independently from UI
+- Hoist state to the lowest common ancestor
+- Use StateFlow in ViewModels, not MutableState
+- Separate state and events clearly
+- Use sealed interfaces for type-safe states
+- Minimize state - derive when possible
+- Use appropriate remember variants
+- Handle side effects correctly
+- Make state immutable (data classes with copy)
+- Single source of truth for each piece of state
 
 ## Common Mistakes
 
-### ❌ Creating State in Unstable Composables
+### Creating State in Unstable Composables
 
 ```kotlin
 // Bad
@@ -939,7 +938,7 @@ fun GoodComposable() {
 }
 ```
 
-### ❌ Not Using Keys in Lists
+### Not Using Keys in Lists
 
 ```kotlin
 // Bad - Items may get confused on recomposition
@@ -960,7 +959,7 @@ LazyColumn {
 }
 ```
 
-### ❌ Reading State During Composition
+### Reading State During Composition
 
 ```kotlin
 // Bad - Can cause infinite recomposition

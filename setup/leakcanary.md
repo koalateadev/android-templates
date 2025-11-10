@@ -417,16 +417,14 @@ when (heapAnalysis) {
 
 ## Best Practices
 
-1. ✅ Use LeakCanary in all debug builds
-2. ✅ Fix leaks as soon as they're detected
-3. ✅ Use lifecycle-aware components (ViewModel, LiveData)
-4. ✅ Unregister listeners in onDestroy()
-5. ✅ Use weak references when appropriate
-6. ✅ Avoid static references to Activities/Views
-7. ✅ Cancel background work when Activity destroyed
-8. ✅ Use Application context for long-lived objects
-9. ✅ Test for leaks in automated tests
-10. ✅ Share leak reports with the team
+- Use LeakCanary in all debug builds
+- Fix leaks as soon as detected
+- Use lifecycle-aware components
+- Unregister listeners in onDestroy()
+- Avoid static references to Activities/Views
+- Cancel background work when Activity destroyed
+- Use Application context for long-lived objects
+- Test for leaks in automated tests
 
 ## Troubleshooting
 

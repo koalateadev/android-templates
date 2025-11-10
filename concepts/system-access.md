@@ -471,31 +471,22 @@ class NetworkMonitor(context: Context) {
 }
 ```
 
-## Key Concepts
+## Key Points
 
-1. **Context is Gateway**
-   - Access to system services
-   - Access to resources
-   - Access to application environment
+**Context:**
+- Gateway to system services and resources
+- Application context: long-lived, no UI
+- Activity context: short-lived, UI operations
 
-2. **Context Types Matter**
-   - Application: Long-lived, no UI
-   - Activity: Short-lived, UI operations
+**System Services:**
+- Singletons shared across app
+- Thread-safe
+- Cached by system
 
-3. **System Services are Singletons**
-   - Shared across app
-   - Thread-safe
-   - Cached by system
-
-4. **ContentResolver is Bridge**
-   - Access other app's data
-   - Queries ContentProviders
-   - Requires permissions
-
-5. **Resources are Localized**
-   - Automatically selects language
-   - Automatically selects density
-   - Managed by Android system
+**Resources:**
+- Automatically localized
+- Density-aware
+- Managed by Android system
 
 ## Resources
 

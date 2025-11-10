@@ -513,16 +513,14 @@ android {
 
 ## Best Practices
 
-1. ✅ Use flavors for environment differences (dev/staging/prod)
-2. ✅ Use build types for debug/release configurations
-3. ✅ Keep variant-specific code minimal
-4. ✅ Use BuildConfig for configuration values
-5. ✅ Store secrets in environment variables or secure storage
-6. ✅ Test all important variants
-7. ✅ Use different app icons for easy identification
-8. ✅ Use different package names to install multiple variants
-9. ✅ Filter out unnecessary variants
-10. ✅ Automate builds with CI/CD
+- Use flavors for environment differences
+- Use build types for debug/release
+- Keep variant-specific code minimal
+- Use BuildConfig for configuration values
+- Store secrets in environment variables
+- Test important variants
+- Use different app icons for identification
+- Use different package names for side-by-side installation
 
 ## Common Use Cases
 

@@ -453,16 +453,12 @@ Free Lottie animations:
 
 ## Best Practices
 
-1. ✅ Use appropriate animation size (don't make them too large)
-2. ✅ Cache frequently used animations
-3. ✅ Handle loading states
-4. ✅ Use loops for continuous animations
-5. ✅ Clean up animations when not visible
-6. ✅ Test animations on different devices
-7. ✅ Keep animation files small (< 100KB)
-8. ✅ Use hardware acceleration
-9. ✅ Provide fallback for old devices
-10. ✅ Test animations with different speeds
+- Keep animation files small (under 100KB)
+- Cache frequently used animations
+- Handle loading states
+- Clean up when not visible
+- Test on different devices
+- Use appropriate speeds
 
 ## Common Issues
 

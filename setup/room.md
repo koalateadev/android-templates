@@ -287,12 +287,12 @@ interface UserDao {
 
 ## Best Practices
 
-1. ✅ Use Flow for observable queries
-2. ✅ Run database operations on background threads (suspend functions)
-3. ✅ Use @Transaction for operations that modify multiple tables
-4. ✅ Always handle migrations in production
-5. ✅ Use indexes for frequently queried columns
-6. ✅ Export schema for version control
+- Use Flow for observable queries
+- Run database operations on background threads
+- Use @Transaction for multi-table operations
+- Handle migrations in production
+- Add indexes for frequently queried columns
+- Export schema for version control
 
 ## Testing
 

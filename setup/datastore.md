@@ -570,16 +570,14 @@ class PreferencesManagerTest {
 
 ## Best Practices
 
-1. ✅ Use DataStore instead of SharedPreferences
-2. ✅ Access DataStore only from Repositories
-3. ✅ Expose Flow/StateFlow to ViewModels
-4. ✅ Use Proto DataStore for complex data structures
-5. ✅ Handle IOExceptions when reading data
-6. ✅ Use structured concurrency (viewModelScope)
-7. ✅ Migrate from SharedPreferences with migrations
-8. ✅ Don't store large datasets (use Room instead)
-9. ✅ Keep keys organized in companion objects
-10. ✅ Write comprehensive tests
+- Use DataStore instead of SharedPreferences
+- Access DataStore only from Repositories
+- Expose Flow/StateFlow to ViewModels
+- Use Proto DataStore for complex data
+- Handle IOExceptions when reading
+- Migrate from SharedPreferences with migrations
+- Don't store large datasets (use Room)
+- Keep keys organized in companion objects
 
 ## DataStore vs SharedPreferences
 

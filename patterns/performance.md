@@ -537,21 +537,18 @@ fun GoodClickable(onClick: () -> Unit) {
 
 ## Best Practices
 
-1. ✅ Use `derivedStateOf` for computed values
-2. ✅ Add `key` to LazyColumn items
-3. ✅ Use `contentType` for mixed lists
-4. ✅ Mark data classes as `@Stable` or `@Immutable`
-5. ✅ Use `remember` for expensive operations
-6. ✅ Avoid reading state during composition
-7. ✅ Use `graphicsLayer` for transforms
-8. ✅ Defer heavy operations
-9. ✅ Use proper image caching
-10. ✅ Profile with Composition Tracing
-11. ✅ Minimize state scope
-12. ✅ Use immutable collections
-13. ✅ Dispose resources properly
-14. ✅ Avoid creating new objects in composition
-15. ✅ Use virtualized lists (LazyColumn)
+- Use derivedStateOf for computed values
+- Add key to LazyColumn items
+- Use contentType for mixed lists
+- Mark data classes as @Stable or @Immutable
+- Use remember for expensive operations
+- Avoid reading state during composition
+- Use graphicsLayer for transforms
+- Defer heavy operations
+- Use proper image caching
+- Profile with Composition Tracing
+- Minimize state scope
+- Dispose resources properly
 
 ## Performance Checklist
 

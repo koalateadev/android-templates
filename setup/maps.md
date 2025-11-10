@@ -456,16 +456,12 @@ fun MapWithLocation() {
 
 ## Best Practices
 
-1. ✅ Always request location permissions
-2. ✅ Handle permission denials gracefully
-3. ✅ Use appropriate zoom levels
-4. ✅ Cluster markers when showing many points
-5. ✅ Cache map tiles for offline use
-6. ✅ Use styled maps for branding
-7. ✅ Handle map lifecycle properly
-8. ✅ Optimize marker icons
-9. ✅ Test on different screen sizes
-10. ✅ Secure API keys properly
+- Request location permissions
+- Handle permission denials
+- Use appropriate zoom levels
+- Cluster markers for many points
+- Handle map lifecycle properly
+- Secure API keys properly
 
 ## Google Maps vs Mapbox
 

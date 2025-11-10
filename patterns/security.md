@@ -858,21 +858,16 @@ fun SecureWebView(url: String) {
 
 ## Best Practices
 
-1. ✅ **Never hardcode secrets** in code
-2. ✅ **Use EncryptedSharedPreferences** for sensitive data
-3. ✅ **Implement certificate pinning** for production
-4. ✅ **Use HTTPS only** (no cleartext traffic)
-5. ✅ **Validate all user input**
-6. ✅ **Use Android Keystore** for cryptographic keys
-7. ✅ **Implement token refresh** mechanism
-8. ✅ **Add FLAG_SECURE** for sensitive screens
-9. ✅ **Use biometric authentication** when appropriate
-10. ✅ **Obfuscate code** with R8/ProGuard
-11. ✅ **Check for root/jailbreak** in sensitive apps
-12. ✅ **Remove debug logs** in production
-13. ✅ **Use strong password policies**
-14. ✅ **Implement session timeout**
-15. ✅ **Secure WebView configuration**
+- Never hardcode secrets in code
+- Use EncryptedSharedPreferences for sensitive data
+- Implement certificate pinning for production
+- Use HTTPS only
+- Validate all user input
+- Use Android Keystore for cryptographic keys
+- Implement token refresh mechanism
+- Add FLAG_SECURE for sensitive screens
+- Obfuscate code with R8/ProGuard
+- Remove debug logs in production
 
 ## Security Checklist
 

@@ -418,33 +418,25 @@ try {
 
 ## Summary
 
-### Key Takeaways
+**WorkManager:**
+- Default choice for deferrable work
+- Handles Doze mode
+- Guaranteed execution
 
-1. **WorkManager is Default Choice**
-   - Handles battery optimization
-   - Respects Doze mode
-   - Guaranteed execution
+**AlarmManager:**
+- For exact timing needs
+- Requires permission (Android 12+)
 
-2. **AlarmManager for Exact Timing**
-   - Calendar apps
-   - Reminder apps
-   - Requires special permission (Android 12+)
+**Foreground Services:**
+- For user-aware ongoing tasks
+- Must show notification
+- Requires service type
 
-3. **Foreground Services for User-Aware Tasks**
-   - Must show notification
-   - For ongoing operations
-   - Requires foreground service type
-
-4. **Background Limits Exist**
-   - Doze mode delays work
-   - App standby buckets
-   - Battery optimization
-
-5. **Be Battery Conscious**
-   - Minimize frequency
-   - Use constraints
-   - Batch operations
-   - Avoid wake locks
+**Considerations:**
+- Doze mode delays work
+- Battery optimization limits
+- Minimize frequency
+- Batch operations
 
 ## Resources
 

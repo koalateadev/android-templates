@@ -473,16 +473,14 @@ fun testNavigation() {
 
 ## Best Practices
 
-1. ✅ Keep back stack in ViewModel for proper lifecycle handling
-2. ✅ Use sealed interfaces for type-safe destinations
-3. ✅ Save back stack state for configuration changes
-4. ✅ Validate back stack operations (don't pop empty stack)
-5. ✅ Consider adaptive layouts for tablets
-6. ✅ Use animations for better UX
-7. ✅ Handle back press properly
-8. ✅ Test back stack logic thoroughly
-9. ✅ Document navigation flows
-10. ✅ Monitor API changes (it's experimental!)
+- Keep back stack in ViewModel
+- Use sealed interfaces for type-safe destinations
+- Save back stack state for configuration changes
+- Validate back stack operations
+- Consider adaptive layouts for tablets
+- Handle back press properly
+- Test back stack logic thoroughly
+- Monitor API changes (experimental)
 
 ## Known Limitations
 

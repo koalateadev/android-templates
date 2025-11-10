@@ -463,16 +463,13 @@ class NoToastDetector : Detector(), SourceCodeScanner {
 
 ## Best Practices
 
-1. ✅ Run lint regularly during development
-2. ✅ Fix lint errors before committing
-3. ✅ Use baseline for legacy code
-4. ✅ Create custom rules for project-specific issues
-5. ✅ Integrate lint into CI/CD pipeline
-6. ✅ Review lint reports in PRs
-7. ✅ Keep lint configuration up to date
-8. ✅ Document suppressed warnings
-9. ✅ Use appropriate severity levels
-10. ✅ Enable all relevant checks
+- Run lint regularly during development
+- Fix errors before committing
+- Use baseline for legacy code
+- Create custom rules for project-specific issues
+- Integrate into CI/CD pipeline
+- Review reports in PRs
+- Document suppressed warnings
 
 ## Performance
 

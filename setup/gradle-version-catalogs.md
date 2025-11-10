@@ -70,16 +70,14 @@ dependencies {
 
 ## Benefits
 
-- ✅ Single source of truth for versions
-- ✅ IDE autocomplete support
-- ✅ Type-safe dependency references
-- ✅ Easy bulk updates
-- ✅ Shared across modules
+- Single source of truth for versions
+- IDE autocomplete support
+- Type-safe dependency references
+- Shared across modules
 
-## Tips
+## Notes
 
 - Group related dependencies in bundles
-- Use semantic versioning
-- Keep the catalog file organized by category
-- Commit `libs.versions.toml` to version control
+- Keep the catalog organized by category
+- Commit to version control
 

@@ -316,13 +316,12 @@ class NetworkTest {
 
 ## Best Practices
 
-1. ✅ Reuse OkHttpClient instances (they're expensive to create)
-2. ✅ Use appropriate timeouts
-3. ✅ Add logging only in debug builds
-4. ✅ Implement caching for better performance
-5. ✅ Handle errors gracefully
-6. ✅ Use interceptors for cross-cutting concerns
-7. ✅ Close response bodies to avoid leaks
+- Reuse OkHttpClient instances
+- Set appropriate timeouts
+- Add logging only in debug builds
+- Implement caching for performance
+- Use interceptors for cross-cutting concerns
+- Close response bodies to avoid leaks
 
 ## Common Interceptors
 

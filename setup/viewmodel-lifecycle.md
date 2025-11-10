@@ -493,16 +493,14 @@ fun `state emissions are correct`() = runTest {
 
 ## Best Practices
 
-1. ✅ Use StateFlow for UI state
-2. ✅ Use SharedFlow for one-shot events
-3. ✅ Launch coroutines in viewModelScope
-4. ✅ Keep ViewModels free of Android dependencies
-5. ✅ Use `collectAsStateWithLifecycle()` in Compose
-6. ✅ Use `repeatOnLifecycle()` in Activities/Fragments
-7. ✅ Don't pass Context to ViewModel
-8. ✅ Use SavedStateHandle for persisting state
-9. ✅ Handle loading, success, and error states
-10. ✅ Write unit tests for ViewModels
+- Use StateFlow for UI state
+- Use SharedFlow for one-shot events
+- Launch coroutines in viewModelScope
+- Keep ViewModels free of Android dependencies
+- Use collectAsStateWithLifecycle() in Compose
+- Don't pass Context to ViewModel
+- Use SavedStateHandle for persisting state
+- Handle loading, success, and error states
 
 ## Common Patterns
 

@@ -560,16 +560,14 @@ fun `test flow with turbine`() = runTest {
 
 ## Best Practices
 
-1. ✅ Use StateFlow for UI state
-2. ✅ Use SharedFlow for one-time events
-3. ✅ Use cold Flow for data streams
-4. ✅ Collect flows in lifecycle-aware manner
-5. ✅ Use appropriate operators (debounce, distinctUntilChanged)
-6. ✅ Handle errors with catch operator
-7. ✅ Use flowOn to specify dispatcher
-8. ✅ Convert Flow to StateFlow for UI layer
-9. ✅ Test flows thoroughly
-10. ✅ Cancel flows when no longer needed
+- Use StateFlow for UI state
+- Use SharedFlow for one-time events
+- Collect flows in lifecycle-aware manner
+- Use appropriate operators (debounce, distinctUntilChanged)
+- Handle errors with catch operator
+- Use flowOn to specify dispatcher
+- Convert Flow to StateFlow for UI layer
+- Cancel flows when no longer needed
 
 ## Resources
 

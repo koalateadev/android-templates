@@ -463,25 +463,23 @@ Timber.e(exception, "Error message")
 ```
 
 ### Benefits
-- ✅ No need for TAG constants
-- ✅ Automatic class name tagging
-- ✅ Easy to disable logging in production
-- ✅ Extensible with custom trees
-- ✅ Better string formatting
-- ✅ Lazy evaluation support
+- No need for TAG constants
+- Automatic class name tagging
+- Easy to disable in production
+- Extensible with custom trees
+- Better string formatting
+- Lazy evaluation support
 
-## Best Practices Summary
+## Best Practices
 
-1. ✅ Initialize Timber in Application.onCreate()
-2. ✅ Use DebugTree for debug builds only
-3. ✅ Create custom trees for production logging
-4. ✅ Don't construct expensive strings in log statements
-5. ✅ Use appropriate log levels
-6. ✅ Log exceptions with context
-7. ✅ Tag logs for easy filtering
-8. ✅ Remove verbose/debug logs in production
-9. ✅ Integrate with crash reporting tools
-10. ✅ Keep log messages meaningful
+- Initialize Timber in Application.onCreate()
+- Use DebugTree for debug builds only
+- Create custom trees for production
+- Don't construct expensive strings in log statements
+- Use appropriate log levels
+- Log exceptions with context
+- Remove verbose/debug logs in production
+- Integrate with crash reporting tools
 
 ## Resources
 

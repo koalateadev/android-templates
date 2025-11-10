@@ -701,16 +701,14 @@ fun Context.openMap(latitude: Double, longitude: Double, label: String = "") {
 
 ## Best Practices
 
-1. ✅ Always handle ActivityNotFoundException
-2. ✅ Use Intent.createChooser() for better UX
-3. ✅ Check for permissions before using intents that require them
-4. ✅ Provide fallbacks when specific apps aren't installed
-5. ✅ Use appropriate MIME types
-6. ✅ Add FLAG_GRANT_READ_URI_PERMISSION for sharing files
-7. ✅ Use FileProvider for sharing files
-8. ✅ Test on different devices and Android versions
-9. ✅ Handle edge cases gracefully
-10. ✅ Show user feedback (Toast/Snackbar)
+- Always handle ActivityNotFoundException
+- Use Intent.createChooser() for better UX
+- Check permissions before using intents
+- Provide fallbacks when apps aren't installed
+- Use appropriate MIME types
+- Add FLAG_GRANT_READ_URI_PERMISSION for files
+- Use FileProvider for sharing files
+- Handle edge cases gracefully
 
 ## Resources
 

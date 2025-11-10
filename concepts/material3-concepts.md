@@ -403,20 +403,19 @@ Button(onClick = {}) {  // Container + State layers
 
 ## Best Practices
 
-1. ✅ Use dynamic color when appropriate
-2. ✅ Provide static fallback (pre-Android 12)
-3. ✅ Use semantic color tokens (not hardcoded colors)
-4. ✅ Follow typography scale
-5. ✅ Use proper elevation levels
-6. ✅ Test in light and dark modes
-7. ✅ Respect user preferences (dark mode, font size)
-8. ✅ Use Material components (built-in accessibility)
-9. ✅ Design for different window sizes
-10. ✅ Follow motion guidelines
+- Use dynamic color when appropriate
+- Provide static fallback (pre-Android 12)
+- Use semantic color tokens
+- Follow typography scale
+- Use proper elevation levels
+- Test in light and dark modes
+- Respect user preferences
+- Use Material components
+- Design for different window sizes
 
 ## Common Mistakes
 
-### ❌ Hardcoding Colors
+### Hardcoding Colors
 
 ```kotlin
 // Bad
@@ -429,7 +428,7 @@ Text(
 )
 ```
 
-### ❌ Mixing Color Pairs
+### Mixing Color Pairs
 
 ```kotlin
 // Bad - May have poor contrast
@@ -443,7 +442,7 @@ Surface(color = colorScheme.primary) {
 }
 ```
 
-### ❌ Custom Typography without Scale
+### Custom Typography without Scale
 
 ```kotlin
 // Bad - Fixed size
@@ -456,18 +455,16 @@ Text(
 )
 ```
 
-## Key Concepts
+## Summary
 
-1. **Design Tokens**: Foundational values (colors, typography)
-2. **Color Roles**: Semantic meaning (primary, error, surface)
-3. **Dynamic Color**: Personalized from wallpaper (Android 12+)
-4. **Typography Scale**: 15 predefined text styles
-5. **Shape System**: 4 shape scales
-6. **Elevation**: Both tonal and shadow
-7. **Motion**: Meaningful, focused transitions
-8. **Adaptive**: Responds to screen size
-9. **Accessible**: Built-in accessibility features
-10. **State Layers**: Visual feedback for interactions
+- Design tokens: foundational values
+- Color roles: semantic meaning
+- Dynamic color: from wallpaper (Android 12+)
+- Typography: 15 text styles
+- Shape: 4 shape scales
+- Elevation: tonal and shadow
+- Adaptive to screen size
+- Built-in accessibility
 
 ## Resources
 

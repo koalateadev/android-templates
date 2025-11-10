@@ -509,21 +509,17 @@ enum class SyncStatus {
 
 ## Best Practices
 
-1. ✅ Cache data locally (Room database)
-2. ✅ Show cached data immediately
-3. ✅ Update cache from network in background
-4. ✅ Monitor network connectivity
-5. ✅ Queue changes when offline
-6. ✅ Sync when connection restored
-7. ✅ Handle conflicts appropriately
-8. ✅ Use optimistic updates for better UX
-9. ✅ Show sync status to users
-10. ✅ Implement proper error handling
-11. ✅ Use WorkManager for background sync
-12. ✅ Consider data retention policies
-13. ✅ Handle partial sync failures
-14. ✅ Test offline scenarios thoroughly
-15. ✅ Provide manual sync option
+- Cache data locally with Room
+- Show cached data immediately
+- Update cache from network in background
+- Monitor network connectivity
+- Queue changes when offline
+- Sync when connection restored
+- Handle conflicts appropriately
+- Use optimistic updates
+- Show sync status to users
+- Use WorkManager for background sync
+- Test offline scenarios thoroughly
 
 ## Resources
 

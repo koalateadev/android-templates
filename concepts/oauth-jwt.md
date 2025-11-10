@@ -242,9 +242,9 @@ fun isTokenExpired(token: String): Boolean {
 **Important**: Never validate JWT signature on client side! Always validate on server.
 
 Client should only:
-- ✅ Check expiration
-- ✅ Read claims (user info)
-- ❌ Validate signature (server's job)
+- Check expiration
+- Read claims (user info)
+- Don't validate signature (server's job)
 
 ## Token Refresh Flow
 
@@ -502,31 +502,31 @@ data class OAuth2Config(
 #### 1. Token Interception
 
 ```kotlin
-// ❌ Bad - HTTP
+// Bad - HTTP
 val baseUrl = "http://api.example.com"
 
-// ✅ Good - HTTPS only
+// Good - HTTPS only
 val baseUrl = "https://api.example.com"
 ```
 
 #### 2. Token Leakage
 
 ```kotlin
-// ❌ Bad - Logged
+// Bad - Logged
 Timber.d("Token: $accessToken")
 
-// ✅ Good - Never log tokens
+// Good - Never log tokens
 Timber.d("Authentication successful")
 ```
 
 #### 3. No Token Refresh
 
 ```kotlin
-// ❌ Bad - Use expired tokens
+// Bad - Use expired tokens
 val token = getAccessToken()
 apiService.getData(token)  // May be expired
 
-// ✅ Good - Validate before use
+// Good - Validate before use
 val token = getValidAccessToken()  // Refreshes if needed
 apiService.getData(token)
 ```
@@ -534,7 +534,7 @@ apiService.getData(token)
 #### 4. Insecure Storage
 
 ```kotlin
-// ❌ Bad - Plain storage
+// Bad - Plain storage
 prefs.edit { putString("token", accessToken) }
 
 // ✅ Good - Encrypted storage
@@ -558,7 +558,7 @@ With PKCE (secure):
         ↓
     Tries to exchange code
         ↓
-    ❌ Fails - doesn't have code_verifier
+    Fails - doesn't have code_verifier
 ```
 
 ## Complete Authentication Flow
@@ -731,37 +731,37 @@ suspend fun ensureValidToken(): String? {
 
 ## Common Mistakes
 
-### ❌ Validating JWT Signature on Client
+### Validating JWT Signature on Client
 
 ```kotlin
-// ❌ Never do this - client can't securely validate
+// Bad - client can't securely validate
 fun validateSignature(token: String): Boolean {
     // Client doesn't have secret key
     // Can't securely validate
 }
 
-// ✅ Server validates signature
+// Server validates signature
 // Client only checks expiration
 ```
 
-### ❌ Storing Tokens in Logs
+### Storing Tokens in Logs
 
 ```kotlin
-// ❌ Bad
+// Bad
 Timber.d("Access token: $token")
 
-// ✅ Good
+// Good
 Timber.d("Successfully authenticated")
 ```
 
-### ❌ Not Handling Token Expiration
+### Not Handling Token Expiration
 
 ```kotlin
-// ❌ Bad
+// Bad
 val token = getAccessToken()
 apiService.getData(token)  // May fail if expired
 
-// ✅ Good
+// Good
 val token = getValidAccessToken()  // Refreshes if needed
 if (token != null) {
     apiService.getData(token)
@@ -770,37 +770,28 @@ if (token != null) {
 }
 ```
 
-## Key Takeaways
+## Summary
 
-1. **OAuth2 is for Authorization**
-   - Grants access to resources
-   - Uses tokens, not passwords
-   - Supports scopes
+**OAuth2:**
+- Authorization framework (not authentication)
+- Uses tokens, not passwords
+- Supports scopes for permissions
 
-2. **PKCE is Required for Mobile**
-   - Prevents code interception
-   - No client secret needed
-   - Standard for mobile apps
+**PKCE:**
+- Required for mobile apps
+- Prevents authorization code interception
+- No client secret needed
 
-3. **JWT is Self-Contained**
-   - Contains claims (user info)
-   - Has expiration
-   - Can't be validated on client
+**JWT:**
+- Self-contained with claims
+- Has expiration
+- Validate signature server-side only
 
-4. **Tokens Must Be Secured**
-   - Encrypted storage
-   - HTTPS only
-   - Never logged
-
-5. **Implement Refresh Flow**
-   - Access tokens expire quickly
-   - Refresh tokens last longer
-   - Automatic refresh improves UX
-
-6. **Handle Auth Failures**
-   - Redirect to login when refresh fails
-   - Clear tokens on logout
-   - Show appropriate error messages
+**Security:**
+- Store tokens encrypted
+- Use HTTPS only
+- Never log tokens
+- Implement refresh flow
 
 ## Resources
 

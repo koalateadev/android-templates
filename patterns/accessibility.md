@@ -742,21 +742,17 @@ fun announceForAccessibility(context: Context, message: String) {
 
 ## Best Practices
 
-1. ✅ **Add content descriptions** to all interactive elements
-2. ✅ **Use semantic properties** appropriately
-3. ✅ **Ensure minimum touch targets** (48dp x 48dp)
-4. ✅ **Support text scaling** (don't force fixed sizes)
-5. ✅ **Provide sufficient color contrast** (4.5:1 minimum)
-6. ✅ **Merge semantics** for complex components
-7. ✅ **Mark headings** with heading()
-8. ✅ **Add custom actions** for complex interactions
-9. ✅ **Test with TalkBack** enabled
-10. ✅ **Support keyboard navigation**
-11. ✅ **Provide error messages** in forms
-12. ✅ **Use live regions** for dynamic content
-13. ✅ **Hide decorative elements** from screen readers
-14. ✅ **Test with different font sizes**
-15. ✅ **Support high contrast mode**
+- Add content descriptions to interactive elements
+- Use semantic properties appropriately
+- Ensure minimum touch targets (48dp)
+- Support text scaling
+- Provide sufficient color contrast (4.5:1)
+- Merge semantics for complex components
+- Mark headings with heading()
+- Test with TalkBack
+- Support keyboard navigation
+- Provide error messages in forms
+- Hide decorative elements from screen readers
 
 ## Accessibility Checklist
 

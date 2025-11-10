@@ -529,20 +529,19 @@ fun `test with delay`() = runTest {
 
 ## Best Practices
 
-1. ✅ Use structured concurrency (viewModelScope, lifecycleScope)
-2. ✅ Always use appropriate dispatchers
-3. ✅ Handle cancellation properly
-4. ✅ Use supervisorScope for independent operations
-5. ✅ Avoid GlobalScope (except for application-wide operations)
-6. ✅ Use withContext for switching dispatchers
-7. ✅ Prefer Flow over callbacks
-8. ✅ Write testable code with dependency injection
-9. ✅ Handle errors appropriately
-10. ✅ Use timeout for network operations
+- Use structured concurrency (viewModelScope, lifecycleScope)
+- Use appropriate dispatchers
+- Handle cancellation properly
+- Use supervisorScope for independent operations
+- Avoid GlobalScope
+- Use withContext for switching dispatchers
+- Prefer Flow over callbacks
+- Handle errors appropriately
+- Use timeout for network operations
 
 ## Common Mistakes
 
-❌ **Blocking the main thread:**
+**Blocking the main thread:**
 ```kotlin
 // Bad
 runBlocking {
@@ -555,7 +554,7 @@ viewModelScope.launch {
 }
 ```
 
-❌ **Not handling cancellation:**
+**Not handling cancellation:**
 ```kotlin
 // Bad
 while (true) {
@@ -568,7 +567,7 @@ while (isActive) {
 }
 ```
 
-❌ **Using GlobalScope:**
+**Using GlobalScope:**
 ```kotlin
 // Bad
 GlobalScope.launch {

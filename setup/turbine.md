@@ -418,20 +418,20 @@ fun `test debounced search`() = runTest(testDispatcher) {
 
 ## Best Practices
 
-1. ✅ Always call `awaitComplete()` or `cancelAndIgnoreRemainingEvents()`
-2. ✅ Use `runTest` for coroutine tests
-3. ✅ Set up `TestDispatcher` for ViewModels
-4. ✅ Test all flow states (Loading, Success, Error)
-5. ✅ Use `skipItems()` to ignore initial values
-6. ✅ Test error cases with `awaitError()`
-7. ✅ Clean up properly in teardown
+- Always call awaitComplete() or cancelAndIgnoreRemainingEvents()
+- Use runTest for coroutine tests
+- Set up TestDispatcher for ViewModels
+- Test all flow states
+- Use skipItems() to ignore initial values
+- Clean up properly in teardown
 
 ## Common Pitfalls
 
-❌ **Forgetting to collect**: Flow tests must be inside `.test { }` block
-❌ **Not using TestDispatcher**: ViewModels need proper test dispatcher setup
-❌ **Not completing tests**: Always end with `awaitComplete()` or cancel
-❌ **Testing hot flows incorrectly**: StateFlow always has a value
+**Common mistakes:**
+- Forgetting to collect: Flow tests must be inside .test {} block
+- Not using TestDispatcher: ViewModels need proper test dispatcher setup
+- Not completing tests: Always end with awaitComplete() or cancel
+- Testing hot flows incorrectly: StateFlow always has a value
 
 ## Resources
 

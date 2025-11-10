@@ -909,7 +909,7 @@ fun localizedFormat(instant: Instant): String {
 
 ## Common Pitfalls
 
-### ❌ Using SimpleDateFormat Without Locale
+### Using SimpleDateFormat Without Locale
 
 ```kotlin
 // Bad - Uses default locale (can change)
@@ -919,7 +919,7 @@ val sdf = SimpleDateFormat("dd/MM/yyyy")
 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.US)
 ```
 
-### ❌ SimpleDateFormat Thread Safety
+### SimpleDateFormat Thread Safety
 
 ```kotlin
 // Bad - SimpleDateFormat is not thread-safe
@@ -949,7 +949,7 @@ class BestRepository {
 }
 ```
 
-### ❌ Storing Formatted Dates
+### Storing Formatted Dates
 
 ```kotlin
 // Bad - Hard to parse, locale-dependent
@@ -965,7 +965,7 @@ data class Event(
 )
 ```
 
-### ❌ Ignoring Timezones
+### Ignoring Timezones
 
 ```kotlin
 // Bad - Assumes local timezone
@@ -979,7 +979,7 @@ sendToServer(instant.toString())
 // "2025-10-20T17:30:45Z" - unambiguous
 ```
 
-### ❌ Calendar Month Confusion
+### Calendar Month Confusion
 
 ```kotlin
 // Bad - Calendar months are 0-indexed!
@@ -995,61 +995,26 @@ val date = LocalDate.of(2025, 10, 20)  // October 20th
 
 ## Best Practices
 
-### 1. Choose the Right Approach
+**Choose Approach:**
+- New apps (minSdk >= 26): Use java.time
+- Older support: Use desugaring
+- Alternative: ThreeTenABP
 
-```kotlin
-// For new apps (minSdk >= 26)
-// ✅ Use java.time directly
+**Storage:**
+- Store as UTC timestamp (Long) or ISO 8601
+- Never store formatted dates
 
-// For apps supporting older devices
-// ✅ Use desugaring (recommended)
-// ✅ Use ThreeTenABP (alternative)
-// ⚠️ Version check (last resort)
-```
+**Display:**
+- Use user's locale
+- Respect system preferences (12h/24h)
 
-### 2. Storage Format
+**Timezones:**
+- Store in UTC
+- Display in user's timezone
 
-```kotlin
-// ✅ Store as UTC timestamp (Long)
-val timestamp = Instant.now().toEpochMilli()
-
-// ✅ Or ISO 8601 string
-val isoString = Instant.now().toString()
-
-// ❌ Never store formatted dates
-```
-
-### 3. Display Format
-
-```kotlin
-// ✅ Use user's locale
-val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
-    .withLocale(Locale.getDefault())
-
-// ✅ Respect system preferences (12h/24h)
-val is24Hour = DateFormat.is24HourFormat(context)
-```
-
-### 4. Timezone Handling
-
-```kotlin
-// ✅ Store in UTC
-val utc = Instant.now()
-
-// ✅ Display in user's timezone
-val userZone = ZoneId.systemDefault()
-val userTime = utc.atZone(userZone)
-```
-
-### 5. Thread Safety
-
-```kotlin
-// ✅ java.time is thread-safe
-val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")  // Reusable
-
-// ❌ SimpleDateFormat is NOT thread-safe
-val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.US)  // Create new each time
-```
+**Thread Safety:**
+- java.time is thread-safe
+- SimpleDateFormat is NOT thread-safe
 
 ## Recommended Approach
 

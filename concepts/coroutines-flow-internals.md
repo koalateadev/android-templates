@@ -517,34 +517,22 @@ val sharedFlow: SharedFlow<Data> = dataFlow
 - Hot flows: Small memory for buffer/replay
 - Operators: Minimal overhead (inline functions)
 
-## Key Takeaways
+## Summary
 
-1. **Coroutines suspend, don't block**
-   - Can pause and resume
-   - Thread can work on other tasks
+**Coroutines:**
+- Suspend, don't block threads
+- Structured concurrency prevents leaks
+- Dispatchers control execution thread
 
-2. **Structured concurrency**
-   - Parent-child relationships
-   - Automatic cancellation propagation
-   - No leaked coroutines
+**Flow:**
+- Cold by default (new execution per collector)
+- Convert to hot with shareIn/stateIn
+- Operators create new flows
 
-3. **Dispatchers control execution**
-   - Main: UI thread
-   - IO: Blocking I/O
-   - Default: CPU work
-
-4. **Flow is cold by default**
-   - New execution per collector
-   - Convert to hot with shareIn/stateIn
-
-5. **Cancellation is cooperative**
-   - Check isActive
-   - Use cancellable suspension points
-   - Clean up in finally blocks
-
-6. **Context is inherited**
-   - Children inherit parent context
-   - Can override specific elements
+**Cancellation:**
+- Cooperative (requires suspension points)
+- Propagates through hierarchy
+- Clean up in finally blocks
 
 ## Resources
 

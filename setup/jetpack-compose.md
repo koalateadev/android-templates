@@ -104,13 +104,13 @@ fun MainScreenPreview() {
 }
 ```
 
-## Key Features
+## Features
 
-- 🎨 Declarative UI
-- 🔄 Automatic recomposition
-- 🎯 Type-safe builders
-- 👀 Live preview
-- 🧪 Easy testing
+- Declarative UI
+- Automatic recomposition
+- Type-safe builders
+- Live preview support
+- Built-in testing APIs
 
 ## Best Practices
 

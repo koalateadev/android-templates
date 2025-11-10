@@ -480,16 +480,14 @@ val imageLoader = ImageLoader.Builder(context)
 
 ## Best Practices
 
-1. ✅ Use AsyncImage for Compose
-2. ✅ Configure global ImageLoader in Application class
-3. ✅ Use appropriate cache policies
-4. ✅ Add placeholders for better UX
-5. ✅ Handle error states
-6. ✅ Use transformations for common image manipulations
-7. ✅ Preload images when needed
-8. ✅ Set appropriate content descriptions for accessibility
-9. ✅ Use disk cache for network images
-10. ✅ Monitor memory usage
+- Use AsyncImage for Compose
+- Configure global ImageLoader in Application class
+- Use appropriate cache policies
+- Add placeholders for better UX
+- Handle error states
+- Use transformations for common manipulations
+- Set appropriate content descriptions
+- Use disk cache for network images
 
 ## Common Patterns
 

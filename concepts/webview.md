@@ -1076,52 +1076,42 @@ WebView(applicationContext)
 (webView.parent as? ViewGroup)?.removeView(webView)
 ```
 
-## When NOT to Use WebView
+## When to Use WebView
 
-❌ **Don't use WebView for:**
-- Simple external links → Use Custom Tabs
-- OAuth login → Use Custom Tabs (better security)
-- Full browser experience → Use Browser Intent
-- Native performance needed → Build native UI
-- Complex native features → Use native code
+**Don't use for:**
+- Simple external links (use Custom Tabs)
+- OAuth login (use Custom Tabs)
+- Full browser experience (use Browser Intent)
+- Performance-critical UIs (build native)
 
-✅ **Use WebView for:**
+**Use for:**
 - Embedded content you control
-- Hybrid apps (React Native, Flutter use WebView)
-- Displaying dynamic HTML content
-- Web-based forms in your app
-- In-app help/documentation
+- Hybrid app frameworks
+- Dynamic HTML content
+- Web-based forms
+- In-app help pages
 
 ## Summary
 
-### Key Takeaways
+**Security:**
+- Disable JavaScript unless needed
+- Block file access
+- Never ignore SSL errors
+- Validate all inputs
 
-1. **Security First**
-   - Disable JavaScript unless needed
-   - Block file access
-   - Never ignore SSL errors
-   - Validate JavaScript bridge inputs
+**Tool Selection:**
+- WebView for embedded content
+- Custom Tabs for external links
+- Browser Intent for simple URLs
 
-2. **Choose Right Tool**
-   - WebView: Embedded content
-   - Custom Tabs: External links
-   - Browser: Simple URLs
+**Lifecycle:**
+- Call onPause/onResume
+- Clean up in onDestroy
+- Handle back navigation
 
-3. **Proper Lifecycle**
-   - Call onPause/onResume
-   - Clean up in onDestroy
-   - Handle back navigation
-
-4. **Performance**
-   - Use Application context
-   - Reuse WebView instances
-   - Proper memory management
-
-5. **User Experience**
-   - Show loading states
-   - Handle errors gracefully
-   - Support file uploads
-   - Enable zoom if appropriate
+**Performance:**
+- Use Application context
+- Proper memory management
 
 ## Resources
 

@@ -465,13 +465,13 @@ fun testNavigation() {
 
 ## Best Practices
 
-1. ✅ Use type-safe navigation with sealed classes or Safe Args
-2. ✅ Keep navigation logic in the composable/fragment, not ViewModel
-3. ✅ Use single activity architecture with Compose
-4. ✅ Handle deep links for better user experience
-5. ✅ Use `launchSingleTop` to prevent multiple instances
-6. ✅ Save and restore state for bottom navigation
-7. ✅ Test navigation flows
+- Use type-safe navigation with sealed classes or Safe Args
+- Keep navigation logic in composable/fragment, not ViewModel
+- Use single activity architecture with Compose
+- Handle deep links for better UX
+- Use launchSingleTop to prevent multiple instances
+- Save and restore state for bottom navigation
+- Test navigation flows
 
 ## Common Patterns
 

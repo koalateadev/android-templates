@@ -471,14 +471,13 @@ class ApiServiceTest {
 
 ## Best Practices
 
-1. ✅ Use suspend functions with Coroutines
-2. ✅ Handle errors gracefully with sealed classes
-3. ✅ Use Repository pattern for data access
-4. ✅ Implement request/response interceptors
-5. ✅ Use proper timeouts
-6. ✅ Cache responses when appropriate
-7. ✅ Use TypeConverters for custom types
-8. ✅ Keep API interface clean and focused
+- Use suspend functions with Coroutines
+- Handle errors with sealed classes
+- Use Repository pattern for data access
+- Implement interceptors for cross-cutting concerns
+- Set appropriate timeouts
+- Cache responses when appropriate
+- Keep API interface focused
 
 ## Resources
 

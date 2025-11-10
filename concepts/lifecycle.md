@@ -461,34 +461,22 @@ class MyActivity : AppCompatActivity() {
 
 ## Summary
 
-### Key Takeaways
+**Activity/Fragment:**
+- onCreate → onStart → onResume → onPause → onStop → onDestroy
+- onDestroy may be skipped if process killed
+- Keep onPause fast
 
-1. **Activity/Fragment Lifecycle**
-   - onCreate → onStart → onResume → onPause → onStop → onDestroy
-   - May skip onDestroy (process killed)
-   - onPause must be fast
+**ViewModel:**
+- Survives configuration changes
+- Cleared when activity finished
 
-2. **ViewModel Lifecycle**
-   - Created on first access
-   - Survives configuration changes
-   - Cleared when activity finished
+**Composable:**
+- Enters → Recomposes → Leaves
+- Use DisposableEffect for cleanup
 
-3. **Composable Lifecycle**
-   - Enters → Recomposes → Leaves
-   - Use DisposableEffect for cleanup
-   - Use remember to survive recomposition
-
-4. **Process Lifecycle**
-   - Can be killed at any time
-   - Save state in onSaveInstanceState
-   - Restore in onCreate
-
-5. **Best Practices**
-   - Use lifecycle-aware components
-   - Clean up resources properly
-   - Collect flows lifecycle-aware
-   - Don't leak Activity context
-   - Use repeatOnLifecycle for Flow collection
+**Process:**
+- Can be killed anytime
+- Save state in onSaveInstanceState
 
 ## Resources
 

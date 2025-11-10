@@ -1,8 +1,8 @@
-# Android Concepts & Deep Dives
+# Concepts
 
-In-depth explanations of how Android systems work under the hood.
+How Android systems work.
 
-## 📚 Available Guides
+## Available Guides
 
 ### [Lifecycle Deep Dive](./lifecycle.md)
 Understand Android and Compose lifecycles:
@@ -105,56 +105,35 @@ Understanding WebView and web content:
 - Debugging WebView
 - When NOT to use WebView
 
-## 🎯 How This Differs
+## Organization
 
-| Folder | Purpose | Content |
-|--------|---------|---------|
-| **setup/** | Configuration | "How to set it up" |
-| **patterns/** | Implementation | "How to use it" |
-| **concepts/** | Understanding | "How it works" |
+| Folder | Purpose |
+|--------|---------|
+| setup/ | Library configuration |
+| patterns/ | Code implementation |
+| concepts/ | System internals |
 
-## 💡 When to Use These Guides
+## Reading Order
 
-- 📖 **Learning**: Understand fundamentals before implementation
-- 🐛 **Debugging**: Know how systems work to fix issues
-- 🏗️ **Architecture**: Make informed decisions
-- 📚 **Teaching**: Help others understand Android
-- 🎓 **Interviews**: Deepen your knowledge
-- 🔍 **Troubleshooting**: Diagnose problems effectively
+**Beginner:**
+1. Lifecycle
+2. System Access
+3. Compose Rendering
 
-## 🎓 Recommended Reading Order
+**Intermediate:**
+1. Coroutines & Flow Internals
+2. Room Transactions
+3. Material3 Concepts
 
-### For Beginners
-1. [Lifecycle Deep Dive](./lifecycle.md)
-2. [System Access](./system-access.md)
-3. [Compose Rendering](./compose-rendering.md)
+**Advanced:**
+1. Background Work
+2. OAuth2 & JWT
+3. DateTime Handling
+4. WebView
 
-### For Intermediate
-1. [Coroutines & Flow Internals](./coroutines-flow-internals.md)
-2. [Room Transactions](./room-transactions.md)
-3. [Material3 Design System](./material3-concepts.md)
+## Related
 
-### For Advanced
-1. [Background Work](./background-work.md)
-2. [OAuth2 & JWT](./oauth-jwt.md)
-
-## 🔗 Related Content
-
-- [Setup Guides](../setup/) - Configure these libraries
-- [Pattern Guides](../patterns/) - Implement these patterns
-- [Quick Start](../QUICKSTART.md) - Get started quickly
-
-## 🤝 Contributing
-
-These guides aim to explain complex topics clearly. If you have:
-- Better explanations
-- Diagrams or visualizations
-- Real-world examples
-- Common misconceptions to clarify
-
-Feel free to contribute!
-
----
-
-**Deep understanding leads to better code.** 💡
+- [Setup Guides](../setup/)
+- [Pattern Guides](../patterns/)
+- [Quick Start](../QUICKSTART.md)
 

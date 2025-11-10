@@ -613,16 +613,14 @@ class NavigationTest {
 
 ## Best Practices
 
-1. ✅ Use type-safe routes with Kotlin Serialization
-2. ✅ Keep navigation logic out of ViewModels
-3. ✅ Use single activity architecture
-4. ✅ Handle deep links properly
-5. ✅ Use `launchSingleTop` to avoid duplicate destinations
-6. ✅ Save and restore state for tabs
-7. ✅ Test navigation flows
-8. ✅ Use named routes for clarity
-9. ✅ Handle back press correctly
-10. ✅ Use proper scoping for shared ViewModels
+- Use type-safe routes with Kotlin Serialization
+- Keep navigation logic out of ViewModels
+- Use single activity architecture
+- Handle deep links properly
+- Use launchSingleTop to avoid duplicates
+- Save and restore state for tabs
+- Test navigation flows
+- Handle back press correctly
 
 ## Common Patterns
 

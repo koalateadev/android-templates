@@ -539,16 +539,13 @@ fun capture_screenshot() {
 
 ## Best Practices
 
-1. ✅ Use test tags for reliable element selection
-2. ✅ Wait for asynchronous operations
-3. ✅ Test user interactions, not implementation
-4. ✅ Use semantic properties appropriately
-5. ✅ Keep tests focused and independent
-6. ✅ Test accessibility with semantics
-7. ✅ Use meaningful assertions
-8. ✅ Test error states
-9. ✅ Verify navigation flows
-10. ✅ Test with different screen sizes/orientations
+- Use test tags for reliable element selection
+- Wait for asynchronous operations
+- Test user interactions, not implementation
+- Keep tests focused and independent
+- Test accessibility with semantics
+- Test error states
+- Verify navigation flows
 
 ## Common Patterns
 

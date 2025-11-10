@@ -608,16 +608,13 @@ val jsonString = adapter.toJson(user)
 
 ## Best Practices
 
-1. ✅ Use `@JsonClass(generateAdapter = true)` for code generation
-2. ✅ Use KSP instead of reflection for better performance
-3. ✅ Create custom adapters for complex types
-4. ✅ Use `@Json(name = "...")` for field mapping
-5. ✅ Handle null values explicitly
-6. ✅ Reuse Moshi instance (it's expensive to create)
-7. ✅ Add adapters in Moshi.Builder() in order
-8. ✅ Use Types.newParameterizedType for generics
-9. ✅ Test JSON parsing thoroughly
-10. ✅ Consider using built-in adapters (Rfc3339DateJsonAdapter)
+- Use @JsonClass(generateAdapter = true) for code generation
+- Use KSP instead of reflection
+- Create custom adapters for complex types
+- Use @Json(name = "...") for field mapping
+- Handle null values explicitly
+- Reuse Moshi instance
+- Test JSON parsing thoroughly
 
 ## Common Patterns
 
@@ -772,30 +769,28 @@ data class User(
 )
 ```
 
-## Advantages of Moshi
+## Advantages
 
-✅ **Kotlin-first**: Designed with Kotlin in mind  
-✅ **Null safety**: Respects Kotlin's null safety  
-✅ **Performance**: Faster than Gson with codegen  
-✅ **Smaller**: Smaller library size than Gson  
-✅ **Type-safe**: Better compile-time checks  
-✅ **Modern**: Actively maintained by Square  
-✅ **Flexible**: Easy custom adapters  
-✅ **Clean API**: Simple and intuitive  
+- Kotlin-first design
+- Respects null safety
+- Faster than Gson with codegen
+- Smaller library size
+- Better type safety
+- Actively maintained
+- Clean API
 
 ## When to Use Moshi
 
-✅ New projects with Kotlin  
-✅ Need better Kotlin support than Gson  
-✅ Want performance with codegen  
-✅ Prefer smaller library size  
-✅ Already using Square libraries (OkHttp, Retrofit)  
+- New Kotlin projects
+- Need better Kotlin support than Gson
+- Performance-critical apps
+- Already using Square libraries
 
-## When to Use Alternatives
+## Alternatives
 
-- **Kotlinx Serialization**: Pure Kotlin, multiplatform
-- **Gson**: Legacy projects, Java-heavy codebases
-- **Jackson**: Very complex JSON requirements
+- **Kotlinx Serialization** - Pure Kotlin, multiplatform
+- **Gson** - Legacy projects, Java codebases
+- **Jackson** - Complex JSON requirements
 
 ## Resources
 

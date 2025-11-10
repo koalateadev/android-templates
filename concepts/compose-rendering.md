@@ -453,20 +453,11 @@ fun Example() {
 
 ## Key Concepts
 
-### 1. Composables are Functions
-Not objects - called every recomposition
-
-### 2. Composition Creates a Tree
-UI structure stored in memory
-
-### 3. Recomposition is Optimized
-Only changed parts re-execute
-
-### 4. State Drives UI
-UI = f(state)
-
-### 5. Side Effects Have Lifecycle
-Use proper effect handlers
+1. Composables are functions, not objects
+2. Composition creates a UI tree in memory
+3. Recomposition only re-executes changed parts
+4. State drives UI: UI = f(state)
+5. Side effects have lifecycle - use proper handlers
 
 ## Debugging Recomposition
 

@@ -611,16 +611,14 @@ class UserPagingSourceTest {
 
 ## Best Practices
 
-1. ✅ Use `cachedIn(viewModelScope)` to cache data across config changes
-2. ✅ Handle all load states (refresh, append, prepend)
-3. ✅ Provide retry functionality for errors
-4. ✅ Use RemoteMediator for offline support
-5. ✅ Set appropriate page size (20-50 items)
-6. ✅ Use unique keys for items
-7. ✅ Show loading indicators for better UX
-8. ✅ Handle empty states
-9. ✅ Test PagingSource thoroughly
-10. ✅ Consider using placeholders for consistent item positions
+- Use cachedIn(viewModelScope) to cache across config changes
+- Handle all load states (refresh, append, prepend)
+- Provide retry functionality for errors
+- Use RemoteMediator for offline support
+- Set appropriate page size (20-50 items)
+- Use unique keys for items
+- Handle empty states
+- Test PagingSource thoroughly
 
 ## Common Issues
 

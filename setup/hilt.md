@@ -480,13 +480,12 @@ class RepositoryTest {
 
 ## Best Practices
 
-1. ✅ Use `@Singleton` for app-wide dependencies
-2. ✅ Use `@Binds` instead of `@Provides` when possible (more efficient)
-3. ✅ Keep modules focused and organized by feature
-4. ✅ Use qualifiers for multiple instances of same type
-5. ✅ Inject interfaces, not implementations
-6. ✅ Use constructor injection when possible
-7. ✅ Avoid field injection in fragments (use entry point or ViewModel)
+- Use @Singleton for app-wide dependencies
+- Use @Binds instead of @Provides when possible
+- Keep modules focused and organized by feature
+- Use qualifiers for multiple instances
+- Inject interfaces, not implementations
+- Use constructor injection when possible
 
 ## Common Issues
 

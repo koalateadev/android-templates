@@ -583,16 +583,13 @@ class PermissionViewModel : ViewModel() {
 
 ## Best Practices
 
-1. ✅ Always provide clear rationale for permissions
-2. ✅ Request permissions at the right time (contextually)
-3. ✅ Handle all permission states (granted, denied, permanently denied)
-4. ✅ Guide users to settings when permanently denied
-5. ✅ Test on different Android versions
-6. ✅ Request minimum necessary permissions
-7. ✅ Handle runtime permission changes
-8. ✅ Don't block UI waiting for permissions
-9. ✅ Degrade gracefully when permissions denied
-10. ✅ Follow Android permission best practices
+- Provide clear rationale for permissions
+- Request permissions contextually
+- Handle all permission states
+- Guide users to settings when permanently denied
+- Test on different Android versions
+- Request minimum necessary permissions
+- Degrade gracefully when denied
 
 ## Common Permissions List
 

@@ -85,8 +85,8 @@ suspend fun complexOperation() {
 ```kotlin
 @Transaction
 suspend fun safeUpdate() {
-    userDao.insert(user1)  // ✅ Inserted
-    userDao.insert(user2)  // ❌ Throws exception (duplicate ID)
+    userDao.insert(user1)  // Inserted
+    userDao.insert(user2)  // Throws exception (duplicate ID)
     userDao.insert(user3)  // Never executed
     
     // Transaction rolls back - user1 insertion reverted
@@ -227,9 +227,9 @@ Room.databaseBuilder(context, AppDatabase::class.java, "db")
 
 ### WAL Benefits
 
-✅ **Concurrent reads and writes**  
-✅ **Better performance** for most cases  
-✅ **Reduced lock contention**
+- Concurrent reads and writes
+- Better performance for most cases
+- Reduced lock contention
 
 ### WAL Drawbacks
 
@@ -269,14 +269,14 @@ interface NestedDao {
 ### Batch Operations
 
 ```kotlin
-// ❌ Slow - Individual transactions
+// Slow - Individual transactions
 suspend fun insertOneByOne(users: List<User>) {
     users.forEach { user ->
         userDao.insert(user)  // New transaction each time
     }
 }
 
-// ✅ Fast - Single transaction
+// Fast - Single transaction
 suspend fun insertBatch(users: List<User>) {
     userDao.insertAll(users)  // One transaction for all
 }
@@ -285,7 +285,7 @@ suspend fun insertBatch(users: List<User>) {
 ### Transaction Size
 
 ```kotlin
-// ❌ Bad - Huge transaction
+// Bad - Huge transaction
 @Transaction
 suspend fun processMillionRecords() {
     // Locks database for extended time
@@ -293,7 +293,7 @@ suspend fun processMillionRecords() {
     millionRecords.forEach { insert(it) }
 }
 
-// ✅ Good - Chunked transactions
+// Good - Chunked transactions
 suspend fun processInChunks(records: List<Record>) {
     records.chunked(1000).forEach { chunk ->
         processChunk(chunk)  // Separate transaction per 1000 items
@@ -450,20 +450,19 @@ class UserRepository(
 
 ## Best Practices
 
-1. ✅ Use `@Transaction` for multi-step operations
-2. ✅ Keep transactions short
-3. ✅ Batch inserts when possible
-4. ✅ Use appropriate conflict strategies
-5. ✅ Handle exceptions properly
-6. ✅ Don't nest transactions unnecessarily
-7. ✅ Use WAL mode (default)
-8. ✅ Chunk large operations
-9. ✅ Test transaction rollback scenarios
-10. ✅ Monitor transaction performance
+- Use @Transaction for multi-step operations
+- Keep transactions short
+- Batch inserts when possible
+- Use appropriate conflict strategies
+- Handle exceptions properly
+- Don't nest transactions unnecessarily
+- Use WAL mode (default)
+- Chunk large operations
+- Test transaction rollback scenarios
 
 ## Common Pitfalls
 
-### ❌ Forgetting @Transaction
+### Forgetting @Transaction
 
 ```kotlin
 // Bad - Two separate transactions
@@ -482,7 +481,7 @@ suspend fun updateUserAndPosts(user: User, posts: List<Post>) {
 }
 ```
 
-### ❌ Long-Running Transactions
+### Long-Running Transactions
 
 ```kotlin
 // Bad - Locks database too long
@@ -505,31 +504,20 @@ suspend fun processAndUpdate(users: List<User>) {
 
 ## Summary
 
-### Key Takeaways
+**Transactions:**
+- All-or-nothing execution
+- Automatic rollback on failure
+- Use @Transaction annotation
 
-1. **Transactions Ensure Integrity**
-   - All or nothing execution
-   - Automatic rollback on failure
+**Conflict Strategies:**
+- ABORT: Exception (default)
+- REPLACE: Overwrite
+- IGNORE: Keep existing
 
-2. **@Transaction Annotation**
-   - Wraps operations in database transaction
-   - Works with suspend functions
-   - Handles nesting automatically
-
-3. **Conflict Strategies**
-   - ABORT: Throw exception (default)
-   - REPLACE: Overwrite existing
-   - IGNORE: Keep existing
-
-4. **WAL Mode**
-   - Allows concurrent reads/writes
-   - Default in Room
-   - Better performance
-
-5. **Performance**
-   - Batch operations when possible
-   - Keep transactions short
-   - Chunk large datasets
+**Performance:**
+- Batch operations
+- Keep transactions short
+- Chunk large datasets
 
 ## Resources
 

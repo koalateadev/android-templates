@@ -592,16 +592,14 @@ class ApolloRepositoryTest {
 
 ## Best Practices
 
-1. ✅ Use fragments for reusable fields
-2. ✅ Implement proper error handling
-3. ✅ Use normalized cache for better performance
-4. ✅ Add authentication interceptors
-5. ✅ Handle network errors gracefully
-6. ✅ Use subscriptions for real-time data
-7. ✅ Test with MockServer
-8. ✅ Organize queries in separate files
-9. ✅ Use proper cache policies
-10. ✅ Monitor query performance
+- Use fragments for reusable fields
+- Implement proper error handling
+- Use normalized cache for performance
+- Add authentication interceptors
+- Handle network errors gracefully
+- Test with MockServer
+- Organize queries in separate files
+- Use proper cache policies
 
 ## Resources
 
